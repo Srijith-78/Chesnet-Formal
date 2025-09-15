@@ -11,21 +11,16 @@ This project provides two functionalities:
 
 ### 1️⃣ CheXpert Dataset (for classification)
 
-* Download the [CheXpert dataset](https://stanfordmlgroup.github.io/chexpert/).
+* Download the [CXR8 dataset](https://nihcc.app.box.com/v/ChestXray-NIHCC/folder/37178474737)
 * Place the metadata CSV `Data_Entry_2017_v2020.csv` in your working directory.
-* Prepare a `test_list.txt` file containing the test image filenames, one per line.
-
-### 2️⃣ SIIM-ACR Pneumothorax Segmentation Dataset (for segmentation)
-
-* Download from Kaggle: [SIIM-ACR Pneumothorax Segmentation Data](https://www.kaggle.com/datasets/jesperdramsch/siim-acr-pneumothorax-segmentation-data).
-* Place the downloaded `images/` and `masks/` directories in your working directory.
+* Prepare a `test_list.txt` file containing the test image filenames, one per line. (make sure all tar.gz files are compressed and then finally put inside a single directory images)
 
 ## ⚙️ Dataset Preparation
 
 Use the following script to filter the test CSV and ensure all images exist:
 
 ```bash
-python prepare_cleaned_test.py
+python test.py
 ```
 
 This will generate `cleaned_test.csv` containing only valid image entries.
